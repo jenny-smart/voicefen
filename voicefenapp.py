@@ -31,18 +31,49 @@ html,body,[class*="css"]{ font-family:'Noto Sans TC',sans-serif; }
 [data-testid="stAppViewContainer"]{ background:#0C0C0C !important; }
 [data-testid="stAppViewBlockContainer"]{ background:#0C0C0C !important; }
 
-/* ── 所有文字預設亮色 ── */
-.stApp p, .stApp label, .stApp div,
-.stMarkdown p, .stMarkdown li,
+/* ── 所有文字預設亮色（全覆蓋）── */
+.stApp *, .stApp p, .stApp span, .stApp label,
+.stApp div, .stMarkdown *, .stMarkdown p,
+[data-testid="stMarkdownContainer"] *,
 [data-testid="stMarkdownContainer"] p{ color:#F7F2E8 !important; }
 
 /* selectbox 文字 */
 .stSelectbox [data-baseweb="select"] span,
-.stSelectbox [data-baseweb="select"] div{ color:#F7F2E8 !important; background:#1a1a1a !important; }
+.stSelectbox [data-baseweb="select"] div,
+.stSelectbox [data-baseweb="select"] input{ color:#F7F2E8 !important; background:#1a1a1a !important; }
 
-/* st.info / st.success / st.error 在黑底下保持可讀 */
+/* st.info / st.success / st.error — 自帶淺底，文字要深色 */
 [data-testid="stAlert"]{ border-radius:10px !important; }
-[data-testid="stAlert"] p{ color:#0C0C0C !important; }
+[data-testid="stAlert"] *{ color:#1a1a1a !important; }
+
+/* st.error 紅底時文字白色 */
+[data-testid="stAlert"][data-baseweb="notification"][kind="error"] *{ color:#fff !important; }
+
+/* section header / expander 標題 */
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span{ color:#F7F2E8 !important; }
+
+/* caption */
+[data-testid="stCaptionContainer"] p,
+.stCaption p{ color:#555048 !important; }
+
+/* tab label */
+.stTabs [data-baseweb="tab"] p,
+.stTabs [data-baseweb="tab"] span{ color:inherit !important; }
+
+/* radio label text */
+[data-testid="stSidebar"] .stRadio label p,
+[data-testid="stSidebar"] .stRadio label span{ color:inherit !important; }
+
+/* checkbox label */
+.stCheckbox label p,
+.stCheckbox label span{ color:#8A7F70 !important; }
+
+/* form submit / download btn 文字 */
+.stFormSubmitButton button p,
+.stFormSubmitButton button span,
+[data-testid="stDownloadButton"] button p,
+[data-testid="stDownloadButton"] button span{ color:inherit !important; }
 
 /* Tab panel 黑底 */
 .stTabs [data-baseweb="tab-panel"]{ background:#0C0C0C !important; padding:16px 0 !important; }
