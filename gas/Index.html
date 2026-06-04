@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>魏世芬聲音教練｜課程報名</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0C0C0C;--charcoal:#181818;--graphite:#222;--card:#1E1E1E;--gold:#C9A84C;--gold-lt:#E2C26A;--cream:#F7F2E8;--warm:#8A7F70;--muted:#555048;--white:#fff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);font-family:'Noto Sans TC',sans-serif;color:var(--cream);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(12,12,12,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.15);padding:0 clamp(20px,5vw,48px);height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.nav-logo{font-size:1.4rem;filter:drop-shadow(0 0 8px rgba(201,168,76,.5));}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--white);letter-spacing:.04em;}
+.nav-name span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:clamp(16px,3vw,32px);}
+.nav-a{font-size:.8rem;color:var(--warm);letter-spacing:.08em;cursor:pointer;text-decoration:none;transition:color .2s;}
+.nav-a:hover{color:var(--gold-lt);}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--black);font-size:.8rem;font-weight:700;padding:8px 18px;border-radius:6px;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;letter-spacing:.04em;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px clamp(20px,5vw,48px) 60px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 50%,rgba(201,168,76,.06) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(201,168,76,.04) 0%,transparent 60%);}
+.hero-lines{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(201,168,76,.5) 60px,rgba(201,168,76,.5) 61px);}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;max-width:1100px;width:100%;margin:0 auto;}
+.eyebrow{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:600;line-height:1.15;color:var(--white);margin-bottom:6px;}
+.hero-h1 em{font-style:italic;color:var(--gold-lt);}
+.hero-h1 .sub{font-size:clamp(1.2rem,2.5vw,2rem);font-weight:300;display:block;opacity:.75;margin-top:4px;}
+.hero-p{font-family:'Noto Serif TC',serif;font-size:.95rem;color:var(--warm);margin:22px 0 32px;line-height:1.9;letter-spacing:.06em;}
+.hero-p strong{color:var(--gold-lt);font-weight:400;}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--black);font-size:.88rem;font-weight:700;padding:13px 28px;border-radius:8px;cursor:pointer;border:none;font-family:'Noto Sans TC',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s;}
+.btn-gold:hover{opacity:.88;}
+.btn-outline{background:transparent;border:1px solid rgba(201,168,76,.4);color:var(--gold-lt);font-size:.88rem;padding:13px 28px;border-radius:8px;cursor:pointer;font-family:'Noto Sans TC',sans-serif;transition:border-color .2s;}
+.btn-outline:hover{border-color:var(--gold);}
+.stat-cards{display:flex;flex-direction:column;gap:14px;}
+.stat-c{background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.14);border-radius:14px;padding:20px 26px;display:flex;align-items:center;gap:18px;transition:border-color .3s;}
+.stat-c:hover{border-color:rgba(201,168,76,.4);}
+.stat-icon{font-size:1.8rem;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,.08);border-radius:12px;flex-shrink:0;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--gold-lt);line-height:1;}
+.stat-desc{font-size:.76rem;color:var(--warm);margin-top:4px;letter-spacing:.04em;}
+
+/* DIVIDER */
+.divider{border:none;border-top:1px solid rgba(201,168,76,.08);margin:0 clamp(20px,5vw,48px);}
+
+/* SECTION */
+.section{padding:80px clamp(20px,5vw,48px);max-width:1100px;margin:0 auto;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.6rem);font-weight:400;color:var(--white);margin-bottom:10px;line-height:1.2;}
+.section-title em{font-style:italic;color:var(--gold-lt);}
+.section-sub{font-size:.86rem;color:var(--warm);line-height:1.8;max-width:520px;}
+
+/* COURSES */
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:44px;}
+.course-card{background:var(--card);border:1px solid rgba(201,168,76,.12);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer;position:relative;}
+.course-card:hover{border-color:rgba(201,168,76,.45);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.4);}
+.course-card.featured{border-color:rgba(201,168,76,.32);}
+.course-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--black);font-size:.62rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.08em;}
+.c-top{padding:26px 26px 18px;border-bottom:1px solid rgba(201,168,76,.08);}
+.c-icon{font-size:2rem;margin-bottom:14px;}
+.c-type{font-size:.65rem;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin-bottom:7px;}
+.c-name{font-family:'Noto Serif TC',serif;font-size:1.15rem;font-weight:500;color:var(--white);margin-bottom:9px;line-height:1.4;}
+.c-desc{font-size:.8rem;color:var(--warm);line-height:1.7;}
+.c-bot{padding:18px 26px;}
+.c-meta{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+.c-meta-item{font-size:.76rem;color:var(--warm);}
+.c-row{display:flex;align-items:baseline;justify-content:space-between;}
+.c-price{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--gold-lt);}
+.c-unit{font-size:.7rem;color:var(--muted);margin-left:3px;}
+.btn-enroll{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--black);font-size:.8rem;font-weight:700;padding:9px 18px;border-radius:7px;border:none;cursor:pointer;font-family:'Noto Sans TC',sans-serif;white-space:nowrap;}
+
+/* FORM SECTION */
+.form-bg{background:var(--charcoal);}
+.form-inner{max-width:1100px;margin:0 auto;padding:80px clamp(20px,5vw,48px);display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(32px,5vw,72px);align-items:start;}
+.flow-card{background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.12);border-radius:14px;padding:26px;margin-top:28px;}
+.flow-title{font-size:.72rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;}
+.flow-step{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:.83rem;color:var(--warm);}
+.flow-num{width:22px;height:22px;border-radius:50%;background:var(--gold);color:var(--black);font-size:.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.flow-num.done{background:#A5D6A7;}
+.flow-line{width:1px;height:14px;background:rgba(201,168,76,.2);margin:3px 0 3px 11px;}
+.flow-note{margin-top:18px;padding-top:16px;border-top:1px solid rgba(201,168,76,.08);font-size:.74rem;color:var(--muted);line-height:1.8;}
+
+.form-card{background:var(--graphite);border:1px solid rgba(201,168,76,.12);border-radius:16px;padding:32px;}
+.form-card-title{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:500;color:var(--white);margin-bottom:26px;display:flex;align-items:center;gap:10px;}
+.form-card-title::before{content:'';width:3px;height:16px;background:var(--gold);border-radius:2px;}
+.field{margin-bottom:16px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.field-label{font-size:.73rem;color:var(--warm);letter-spacing:.07em;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
+.req{color:var(--gold);}
+.fi{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);border-radius:8px;padding:11px 14px;color:var(--cream);font-size:.86rem;font-family:'Noto Sans TC',sans-serif;outline:none;appearance:none;transition:border-color .2s;}
+.fi:focus{border-color:rgba(201,168,76,.5);}
+.fi::placeholder{color:var(--muted);font-style:italic;}
+textarea.fi{height:68px;resize:vertical;line-height:1.5;}
+.amount-box{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.04));border:1px solid rgba(201,168,76,.25);border-radius:10px;padding:16px;text-align:center;margin:18px 0;}
+.amount-label{font-size:.7rem;color:var(--warm);letter-spacing:.1em;margin-bottom:4px;}
+.amount-val{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--gold-lt);}
+.btn-submit{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--black);font-size:.92rem;font-weight:700;padding:14px;border-radius:9px;border:none;cursor:pointer;font-family:'Noto Sans TC',sans-serif;letter-spacing:.04em;}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;}
+.form-note{font-size:.7rem;color:var(--muted);text-align:center;margin-top:10px;line-height:1.6;}
+.msg{padding:12px 16px;border-radius:8px;margin-bottom:14px;font-size:.82rem;display:none;}
+.msg.err{background:rgba(192,57,43,.12);border:1px solid rgba(192,57,43,.25);color:#EF9A9A;}
+.msg.ok{background:rgba(129,199,132,.1);border:1px solid rgba(129,199,132,.2);color:#A5D6A7;}
+
+/* SUCCESS */
+.success-box{display:none;background:rgba(129,199,132,.07);border:1px solid rgba(129,199,132,.22);border-radius:14px;padding:30px;text-align:center;}
+.success-box.show{display:block;}
+.s-icon{font-size:2.4rem;margin-bottom:10px;}
+.s-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#A5D6A7;margin-bottom:8px;}
+.s-desc{font-size:.82rem;color:var(--warm);line-height:1.7;}
+.s-id{font-family:monospace;color:var(--gold-lt);font-size:.95rem;margin-top:12px;}
+
+/* QUERY */
+.query-bg{background:var(--black);}
+.query-inner{max-width:660px;margin:0 auto;padding:80px clamp(20px,5vw,48px);}
+.query-card{background:var(--card);border:1px solid rgba(201,168,76,.15);border-radius:16px;padding:32px;margin-top:36px;}
+.search-row{display:flex;gap:10px;margin-bottom:6px;}
+.result-hint{font-size:.72rem;color:var(--muted);margin-bottom:16px;}
+.result-item{background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.12);border-radius:10px;padding:18px 20px;margin-top:14px;}
+.result-item.unpaid{border-color:rgba(192,57,43,.2);}
+.r-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.r-id{font-size:.72rem;color:var(--muted);font-family:monospace;}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:.68rem;font-weight:500;}
+.pill::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;}
+.pill-g{background:rgba(129,199,132,.12);color:#A5D6A7;border:1px solid rgba(129,199,132,.2);}
+.pill-y{background:rgba(201,168,76,.12);color:var(--gold-lt);border:1px solid rgba(201,168,76,.22);}
+.pill-r{background:rgba(192,57,43,.12);color:#EF9A9A;border:1px solid rgba(192,57,43,.2);}
+.r-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.79rem;margin-bottom:4px;}
+.r-lbl{color:var(--muted);font-size:.7rem;margin-bottom:2px;}
+.r-val{color:var(--cream);}
+.fill-box{background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.16);border-radius:9px;padding:18px;margin-top:14px;}
+.fill-title{font-size:.7rem;color:var(--gold);letter-spacing:.08em;margin-bottom:12px;}
+
+/* FOOTER */
+footer{background:var(--charcoal);border-top:1px solid rgba(201,168,76,.1);padding:44px;text-align:center;}
+.f-brand{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--white);margin-bottom:6px;}
+.f-sub{font-size:.75rem;color:var(--muted);letter-spacing:.1em;margin-bottom:16px;}
+.f-link{font-size:.75rem;color:var(--gold);}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;}
+  .stat-cards{display:none;}
+  .form-inner{grid-template-columns:1fr;}
+  .field-row{grid-template-columns:1fr;}
+  .nav-links .nav-a{display:none;}
+}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:rgba(201,168,76,.25);border-radius:2px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">🎤</div>
+    <div class="nav-name">魏世芬 <span>聲音教練</span></div>
+  </div>
+  <div class="nav-links">
+    <a class="nav-a" href="#courses">課程介紹</a>
+    <a class="nav-a" href="#enroll">立即報名</a>
+    <a class="nav-a" href="#query">查詢訂單</a>
+    <button class="nav-cta" onclick="scrollTo('enroll')">🎤 立即報名</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Vocal Coach · 13年</div>
+      <h1 class="hero-h1">魏<em>世芬</em><span class="sub">聲音教練</span></h1>
+      <p class="hero-p">用聲音影響世界<br><strong>帶你找回自己的聲音</strong>，讓每一個字都有力量</p>
+      <div class="btn-row">
+        <button class="btn-gold" onclick="scrollTo('enroll')">🎤 立即報名課程</button>
+        <button class="btn-outline" onclick="scrollTo('courses')">了解課程內容</button>
+      </div>
+    </div>
+    <div class="stat-cards">
+      <div class="stat-c"><div class="stat-icon">🏅</div><div><div class="stat-num">13 年</div><div class="stat-desc">聲音教練資歷 · Vocal Coach</div></div></div>
+      <div class="stat-c"><div class="stat-icon">🎓</div><div><div class="stat-num">500+</div><div class="stat-desc">學員遍及企業主管、主持人、老師</div></div></div>
+      <div class="stat-c"><div class="stat-icon">✨</div><div><div class="stat-num">一對一</div><div class="stat-desc">量身訂製，找回屬於你的聲音</div></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- COURSES -->
+<div id="courses">
+  <div class="section">
+    <div class="eyebrow">Course Programs</div>
+    <h2 class="section-title">選擇適合你的<em>課程</em></h2>
+    <p class="section-sub">無論你想提升說話魅力、突破舞台恐懼，還是追求歌唱技巧，我們都有適合你的課程。</p>
+    <div class="courses-grid" id="courses-grid">
+      <div style="color:var(--muted);padding:40px;text-align:center;grid-column:1/-1;">載入課程中...</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ENROLL -->
+<div class="form-bg" id="enroll">
+  <div class="form-inner">
+    <!-- 左側說明 -->
+    <div>
+      <div class="eyebrow">Enrollment</div>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.2rem);">報名<em>課程</em></h2>
+      <p class="section-sub" style="margin-bottom:0;">填寫表單後，我們收到報名資料將盡快確認，付款資訊將另行提供。</p>
+
+      <div class="flow-card">
+        <div class="flow-title">📋 報名流程</div>
+        <div class="flow-step"><div class="flow-num">1</div> 填寫報名表單</div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><div class="flow-num">2</div> 收到確認通知及付款資訊</div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><div class="flow-num">3</div> 完成付款</div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><div class="flow-num">4</div> 至「查詢訂單」補填付款資料</div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><div class="flow-num done">✓</div> 對帳完成，準備上課！</div>
+        <div class="flow-note">
+          ✦ 支援：銀行轉帳 · LINE Pay · 現金<br>
+          ✦ 付款後請至下方「查詢訂單」補填資料<br>
+          ✦ 如有疑問請聯繫 voicefen.com
+        </div>
+      </div>
+    </div>
+
+    <!-- 右側表單 -->
+    <div>
+      <div class="form-card" id="form-wrap">
+        <div class="form-card-title">報名表單</div>
+        <div class="msg" id="enroll-msg"></div>
+
+        <div class="field-row">
+          <div class="field">
+            <div class="field-label">姓名 <span class="req">*</span></div>
+            <input class="fi" type="text" id="f-name" placeholder="請輸入您的姓名">
+          </div>
+          <div class="field">
+            <div class="field-label">手機號碼 <span class="req">*</span></div>
+            <input class="fi" type="tel" id="f-phone" placeholder="09XXXXXXXX" maxlength="10">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">Email（選填）</div>
+          <input class="fi" type="email" id="f-email" placeholder="方便接收上課通知">
+        </div>
+
+        <div class="field">
+          <div class="field-label">課程選擇 <span class="req">*</span></div>
+          <select class="fi" id="f-course" onchange="updateAmount()">
+            <option value="">請選擇課程</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <div class="field-label">備註（選填）</div>
+          <textarea class="fi" id="f-note" placeholder="例：希望加強的部分、方便上課的時段..."></textarea>
+        </div>
+
+        <div class="amount-box">
+          <div class="amount-label">應付金額</div>
+          <div class="amount-val" id="f-amount">— 請先選擇課程 —</div>
+        </div>
+
+        <button class="btn-submit" id="btn-submit" onclick="submitEnroll()">🎤 確認送出報名</button>
+        <div class="form-note">報名後請至下方「查詢訂單」補填付款資料</div>
+      </div>
+
+      <!-- 成功狀態 -->
+      <div class="success-box" id="success-box">
+        <div class="s-icon">🎉</div>
+        <div class="s-title">報名成功！</div>
+        <div class="s-desc">感謝您的報名，我們將盡快確認上課細節及付款資訊。<br>請至下方「查詢訂單」查看報名記錄並補填付款資料。</div>
+        <div class="s-id" id="s-orderid"></div>
+        <button class="btn-gold" style="margin-top:18px;width:100%;justify-content:center;" onclick="scrollTo('query')">
+          🔍 前往查詢訂單 / 補填付款資料
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUERY -->
+<div class="query-bg" id="query">
+  <div class="query-inner">
+    <div class="eyebrow">Order Lookup</div>
+    <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2rem);">查詢訂單 ／<em>補填付款</em></h2>
+    <p class="section-sub">輸入報名時填寫的手機號碼，即可查詢記錄並補填付款資料。</p>
+
+    <div class="query-card">
+      <div class="search-row">
+        <input class="fi" type="tel" id="q-phone" placeholder="輸入手機號碼 09XXXXXXXX" style="flex:1;" maxlength="10">
+        <button class="btn-gold" id="btn-search" style="white-space:nowrap;padding:11px 22px;" onclick="queryOrders()">🔍 查詢</button>
+      </div>
+      <div class="result-hint">請輸入報名時填寫的手機號碼</div>
+      <div id="query-result"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-brand">魏世芬 聲音教練</div>
+  <div class="f-sub">用聲音影響世界 · Vocal Coach 13年</div>
+  <div class="f-link">voicefen.com</div>
+</footer>
+
+<script>
+// ─── 全域狀態 ───────────────────────────────────────────────
+let COURSES = [];
+let submittedPhone = '';
+
+// ─── 工具 ───────────────────────────────────────────────────
+function scrollTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+function showMsg(el, text, type) {
+  el.textContent = text;
+  el.className = 'msg ' + type;
+  el.style.display = 'block';
+}
+
+// ─── 載入課程 ────────────────────────────────────────────────
+function loadCourses() {
+  google.script.run
+    .withSuccessHandler(function(courses) {
+      COURSES = courses;
+      renderCourses();
+      fillSelect();
+    })
+    .withFailureHandler(function(e) {
+      document.getElementById('courses-grid').innerHTML =
+        '<div style="color:var(--muted);padding:40px;text-align:center;grid-column:1/-1;">課程載入失敗，請重新整理</div>';
+    })
+    .getPublicCourses();
+}
+
+function renderCourses() {
+  const grid = document.getElementById('courses-grid');
+  if (!COURSES.length) {
+    grid.innerHTML = '<div style="color:var(--muted);padding:40px;text-align:center;grid-column:1/-1;">目前尚無開放課程</div>';
+    return;
+  }
+  grid.innerHTML = COURSES.map(c => `
+    <div class="course-card ${c.featured?'featured':''}">
+      ${c.featured ? '<div class="course-badge">最受歡迎</div>' : ''}
+      <div class="c-top">
+        <div class="c-icon">${c.icon||'📌'}</div>
+        <div class="c-type">${c.type}</div>
+        <div class="c-name">${c.name}</div>
+        <div class="c-desc">${c.desc}</div>
+      </div>
+      <div class="c-bot">
+        <div class="c-meta"><div class="c-meta-item">💰 每${c.unit} NT$${Number(c.price).toLocaleString()}</div></div>
+        <div class="c-row">
+          <div><span class="c-price">$${Number(c.price).toLocaleString()}</span><span class="c-unit">/ ${c.unit}</span></div>
+          <button class="btn-enroll" onclick="pickCourse('${c.id}')">立即報名 →</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function fillSelect() {
+  const sel = document.getElementById('f-course');
+  COURSES.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.id;
+    opt.textContent = `${c.icon||''} ${c.name} — $${Number(c.price).toLocaleString()} / ${c.unit}`;
+    sel.appendChild(opt);
+  });
+}
+
+function pickCourse(id) {
+  scrollTo('enroll');
+  setTimeout(() => {
+    document.getElementById('f-course').value = id;
+    updateAmount();
+  }, 600);
+}
+
+function updateAmount() {
+  const id = document.getElementById('f-course').value;
+  const c  = COURSES.find(x => x.id === id);
+  document.getElementById('f-amount').textContent =
+    c ? 'NT$ ' + Number(c.price).toLocaleString() : '— 請先選擇課程 —';
+}
+
+// ─── 提交報名 ────────────────────────────────────────────────
+function submitEnroll() {
+  const name    = document.getElementById('f-name').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const courseId= document.getElementById('f-course').value;
+  const note    = document.getElementById('f-note').value.trim();
+  const msgEl   = document.getElementById('enroll-msg');
+
+  if (!name)     return showMsg(msgEl,'請填寫姓名','err');
+  if (!/^09\d{8}$/.test(phone)) return showMsg(msgEl,'請輸入正確手機號碼（09xxxxxxxx）','err');
+  if (!courseId) return showMsg(msgEl,'請選擇課程','err');
+
+  msgEl.style.display = 'none';
+  const btn = document.getElementById('btn-submit');
+  btn.disabled = true;
+  btn.textContent = '送出中...';
+
+  google.script.run
+    .withSuccessHandler(function(res) {
+      btn.disabled = false;
+      btn.textContent = '🎤 確認送出報名';
+      if (res.ok) {
+        submittedPhone = phone;
+        document.getElementById('form-wrap').style.display = 'none';
+        const sb = document.getElementById('success-box');
+        sb.classList.add('show');
+        document.getElementById('s-orderid').textContent = '訂單編號：' + res.orderId;
+      } else {
+        showMsg(msgEl, res.msg || '送出失敗，請稍後再試', 'err');
+      }
+    })
+    .withFailureHandler(function() {
+      btn.disabled = false;
+      btn.textContent = '🎤 確認送出報名';
+      showMsg(msgEl,'系統錯誤，請稍後再試','err');
+    })
+    .submitEnrollment({ name, phone, email, courseId, note });
+}
+
+// ─── 查詢訂單 ────────────────────────────────────────────────
+function queryOrders() {
+  const phone = document.getElementById('q-phone').value.trim();
+  if (!/^09\d{8}$/.test(phone) && !/^9\d{8}$/.test(phone)) {
+    document.getElementById('query-result').innerHTML =
+      '<div class="msg err" style="display:block;">請輸入正確手機號碼</div>';
+    return;
+  }
+
+  const btn = document.getElementById('btn-search');
+  btn.disabled = true; btn.textContent = '查詢中...';
+  document.getElementById('query-result').innerHTML =
+    '<div style="color:var(--muted);padding:20px;text-align:center;">查詢中...</div>';
+
+  google.script.run
+    .withSuccessHandler(function(res) {
+      btn.disabled = false; btn.textContent = '🔍 查詢';
+      renderQueryResult(res, phone);
+    })
+    .withFailureHandler(function() {
+      btn.disabled = false; btn.textContent = '🔍 查詢';
+      document.getElementById('query-result').innerHTML =
+        '<div class="msg err" style="display:block;">查詢失敗，請稍後再試</div>';
+    })
+    .queryByPhone(phone);
+}
+
+function renderQueryResult(res, phone) {
+  const el = document.getElementById('query-result');
+  if (!res.ok) { el.innerHTML = `<div class="msg err" style="display:block;">${res.msg}</div>`; return; }
+  if (res.count === 0) {
+    el.innerHTML = '<div style="text-align:center;padding:24px;color:var(--muted);">找不到報名記錄，請確認手機號碼是否正確</div>';
+    return;
+  }
+
+  let html = `<div style="font-size:.75rem;color:var(--warm);margin-bottom:4px;padding-top:14px;border-top:1px solid rgba(201,168,76,.08);display:flex;align-items:center;gap:6px;"><span style="color:var(--gold);">●</span> 找到 ${res.count} 筆報名記錄</div>`;
+
+  res.orders.forEach((o, idx) => {
+    const hasPay = o.payment !== null;
+    const isVerified = hasPay && o.payment.verified === '已核對';
+    const statusClass = isVerified ? 'pill-g' : hasPay ? 'pill-y' : 'pill-r';
+    const statusText  = isVerified ? '已完成付款' : hasPay ? '待對帳確認' : '尚未填寫付款資料';
+
+    html += `
+    <div class="result-item ${(!hasPay)?'unpaid':''}">
+      <div class="r-header">
+        <div class="r-id">${o.orderId}</div>
+        <span class="pill ${statusClass}">${statusText}</span>
+      </div>
+      <div class="r-grid">
+        <div><div class="r-lbl">課程</div><div class="r-val">${o.courseName}</div></div>
+        <div><div class="r-lbl">應付金額</div><div class="r-val" style="color:var(--gold-lt);">NT$ ${Number(o.amount).toLocaleString()}</div></div>
+        <div><div class="r-lbl">報名時間</div><div class="r-val" style="color:var(--muted);">${o.timestamp}</div></div>
+        <div><div class="r-lbl">狀態</div><div class="r-val">${o.status}</div></div>
+        ${hasPay ? `
+        <div><div class="r-lbl">付款方式</div><div class="r-val">${o.payment.method}</div></div>
+        <div><div class="r-lbl">帳號後5碼</div><div class="r-val" style="font-family:monospace;color:var(--gold-lt);">${o.payment.account||'—'}</div></div>
+        ` : ''}
+      </div>
+      ${!hasPay ? `
+      <div class="fill-box">
+        <div class="fill-title">✏ 補填付款資料</div>
+        <div class="field" style="margin-bottom:10px;">
+          <div class="field-label">付款方式 <span class="req">*</span></div>
+          <select class="fi" id="pm-method-${idx}">
+            <option value="">請選擇</option>
+            <option>銀行轉帳</option>
+            <option>LINE Pay</option>
+            <option>現金</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="field-row" style="margin-bottom:10px;">
+          <div>
+            <div class="field-label">匯款帳號後5碼</div>
+            <input class="fi" type="tel" id="pm-account-${idx}" placeholder="12345" maxlength="5">
+          </div>
+          <div>
+            <div class="field-label">實際付款金額 <span class="req">*</span></div>
+            <input class="fi" type="number" id="pm-amount-${idx}" value="${o.amount}">
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:12px;">
+          <div class="field-label">備註</div>
+          <input class="fi" id="pm-note-${idx}" placeholder="例：已於今日轉帳">
+        </div>
+        <div class="msg" id="pm-msg-${idx}"></div>
+        <button class="btn-submit" style="padding:11px;" onclick="submitPay('${o.orderId}','${phone}',${idx})">✓ 提交付款資料</button>
+      </div>` : ''}
+    </div>`;
+  });
+
+  el.innerHTML = html;
+}
+
+function submitPay(orderId, phone, idx) {
+  const method  = document.getElementById(`pm-method-${idx}`).value;
+  const account = document.getElementById(`pm-account-${idx}`).value.trim();
+  const amount  = document.getElementById(`pm-amount-${idx}`).value;
+  const note    = document.getElementById(`pm-note-${idx}`).value.trim();
+  const msgEl   = document.getElementById(`pm-msg-${idx}`);
+
+  if (!method) return showMsg(msgEl,'請選擇付款方式','err');
+  if (!amount || Number(amount) <= 0) return showMsg(msgEl,'請輸入有效金額','err');
+
+  msgEl.style.display = 'none';
+
+  google.script.run
+    .withSuccessHandler(function(res) {
+      if (res.ok) {
+        showMsg(msgEl, '✓ 付款資料已送出，感謝！', 'ok');
+        setTimeout(() => queryOrders(), 1500);
+      } else {
+        showMsg(msgEl, res.msg, 'err');
+      }
+    })
+    .withFailureHandler(function() { showMsg(msgEl,'系統錯誤','err'); })
+    .submitPayment({ orderId, phone, method, account, amount: Number(amount), note });
+}
+
+// ─── 初始化 ──────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  loadCourses();
+  // 若從報名成功頁跳回，預填查詢手機
+  if (submittedPhone) document.getElementById('q-phone').value = submittedPhone;
+});
+</script>
+</body>
+</html>
