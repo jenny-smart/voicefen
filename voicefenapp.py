@@ -25,6 +25,40 @@ html,body,[class*="css"]{ font-family:'Noto Sans TC',sans-serif; }
 #MainMenu,footer,header{ visibility:hidden; }
 .block-container{ padding:1.2rem 1.5rem 2rem !important; max-width:100% !important; }
 
+/* ── 強制黑底 ── */
+.stApp{ background:#0C0C0C !important; }
+.main .block-container{ background:#0C0C0C !important; }
+[data-testid="stAppViewContainer"]{ background:#0C0C0C !important; }
+[data-testid="stAppViewBlockContainer"]{ background:#0C0C0C !important; }
+
+/* ── 所有文字預設亮色 ── */
+.stApp p, .stApp label, .stApp div,
+.stMarkdown p, .stMarkdown li,
+[data-testid="stMarkdownContainer"] p{ color:#F7F2E8 !important; }
+
+/* selectbox 文字 */
+.stSelectbox [data-baseweb="select"] span,
+.stSelectbox [data-baseweb="select"] div{ color:#F7F2E8 !important; background:#1a1a1a !important; }
+
+/* st.info / st.success / st.error 在黑底下保持可讀 */
+[data-testid="stAlert"]{ border-radius:10px !important; }
+[data-testid="stAlert"] p{ color:#0C0C0C !important; }
+
+/* Tab panel 黑底 */
+.stTabs [data-baseweb="tab-panel"]{ background:#0C0C0C !important; padding:16px 0 !important; }
+
+/* Expander 內部黑底 */
+[data-testid="stExpander"] details{ background:#1a1a1a !important; }
+[data-testid="stExpander"] summary{ color:#F7F2E8 !important; }
+[data-testid="stExpander"] summary:hover{ color:#E2C26A !important; }
+
+/* Caption 文字 */
+.stCaptionContainer, [data-testid="stCaptionContainer"]{ color:#555048 !important; }
+
+/* Dataframe 深色 */
+[data-testid="stDataFrame"] th{ background:#252525 !important; color:#8A7F70 !important; }
+[data-testid="stDataFrame"] td{ background:#1a1a1a !important; color:#F7F2E8 !important; }
+
 /* Sidebar */
 section[data-testid="stSidebar"]{
     background:#111 !important;
@@ -124,15 +158,13 @@ section[data-testid="stSidebar"] > div{ padding:0 !important; }
     border:1px solid rgba(201,168,76,0.35) !important;
     color:#E2C26A !important;
 }
-
-/* Alert */
-[data-testid="stAlert"]{ border-radius:10px !important; }
-
-/* 隱藏 st.caption 前面的 icon */
 hr{ border-color:rgba(201,168,76,0.1) !important; }
-
-/* Checkbox */
 .stCheckbox label{ color:#8A7F70 !important; }
+[data-testid="column"]{ background:transparent !important; }
+.stNumberInput button{ background:#252525 !important; border:1px solid rgba(201,168,76,.2) !important; color:#E2C26A !important; }
+[data-baseweb="popover"] [role="listbox"]{ background:#1E1E1E !important; border:1px solid rgba(201,168,76,.2) !important; }
+[data-baseweb="popover"] [role="option"]{ color:#F7F2E8 !important; }
+[data-baseweb="popover"] [role="option"]:hover{ background:rgba(201,168,76,.1) !important; }
 </style>
 """, unsafe_allow_html=True)
 
